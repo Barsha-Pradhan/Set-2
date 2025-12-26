@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Antonandletters {
+    public static int countdistinct(String s){
+        String distinct="";
+        for (int i = 0; i <s.length() ; i++) {
+            char ch=s.charAt(i);
+            if (ch>='a'&&ch<'z'){
+                if (distinct.indexOf(ch)==-1){
+                    distinct=distinct+ch;
+                }
+            }
+        }
+        return distinct.length();
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter input");
+        String input = sc.nextLine();
+
+        System.out.println(countdistinct(input));
+    }
+
+}
